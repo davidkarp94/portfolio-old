@@ -37,9 +37,16 @@ header {
 	justify-content: space-between;
 	background: transparent;
   	backdrop-filter: blur(2px);
-	padding: 22px 16%;
+	padding: 32px 16%;
 	border-bottom: 1px solid transparent;
 	transition: all .40s ease;
+}
+
+header.sticky {
+	padding: 10px 16%;
+	border-bottom: 1px solid #0e1630;
+	transition: .3s;
+	background: rgba(235,74,74,.03);
 }
 
 .logo img {
@@ -167,4 +174,49 @@ span {
 	transform: scale(1.01) translateY(-5px);
 	background: transparent;
 	border: 1px solid var(--main-color);
+}
+
+/* Acerca de mí */
+
+.location {
+	display: flex;
+	gap: 10px;
+	align-items: center;
+}
+
+.location img {
+	height: 30px;
+	width: 30px;
+}
+
+.about {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	align-items: center;
+	gap: 6rem;
+}
+
+.about-img img {
+	height: auto;
+	width: 100%;
+	max-width: 460px;
+}
+
+.about-text h4 {
+	margin: 10px 0;
+	color: var(--main-color);
+	font-size: 20px;
+	font-weight: 600;
+	margin: 1rem 0;
+}
+
+.about-text h2 {
+	font-size: var(--h2-font);
+}
+
+.about-text p {
+	color: var(--second-color);
+	font-size: var(--p-font);
+	line-height: 30px;
+	margin-bottom: 2rem;
 }
