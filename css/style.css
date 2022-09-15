@@ -2,7 +2,7 @@
 	--bg-color: #020312;
 	--text-color: #fff;
 	--main-color: #eb4a4a;
-	--second-color: gray;
+	--second-color: #dcdcdc;
 	--third-color: #12141c;
 	--h1-font: 5.2rem;
 	--h2-font: 3.5rem;
@@ -39,7 +39,7 @@ header {
   	backdrop-filter: blur(2px);
 	padding: 22px 16%;
 	border-bottom: 1px solid transparent;
-	transition: all .40 ease;
+	transition: all .40s ease;
 }
 
 .logo img {
@@ -72,4 +72,99 @@ header {
 	z-index: 10001;
 	cursor: pointer;
 	display: none;
+}
+
+/* Home */
+
+section {
+	padding: 160px 16% 90px;
+}
+
+.home {
+	height: 100vh;
+	width: 100%;
+	position: relative;
+	background: url(../img/bg1.svg);
+	background-size: cover;
+	background-position: center;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	transition: 2s;
+
+	animation-name: animate;
+	animation-direction: alternate-reverse;
+	animation-duration: 60s;
+	animation-fill-mode: forwards;
+	animation-iteration-count: infinite;
+	animation-play-state: running;
+	animation-timing-function:ease-in-out;
+}
+
+@keyframes animate {
+	0% {
+		background-image: url(../img/bg2.svg);
+	}
+
+	20% {
+		background-image: url(../img/bg3.svg);
+	}
+
+	40% {
+		background-image: url(../img/bg4.svg);
+	}
+
+	60% {
+		background-image: url(../img/bg5.svg);
+	}
+
+	80% {
+		background-image: url(../img/bg6.svg);
+	}
+
+	100% {
+		background-image: url(../img/bg7.svg);
+	}
+}
+
+.home-text h1 {
+	margin: 20px 0;
+	font-size: var(--h1-font);
+	font-weight: bold;
+	line-height: 1.1;
+	letter-spacing: 2px;
+}
+
+span {
+	color: var(--main-color);
+}
+
+.home-text h4 {
+	color: var(--main-color);
+	font-size: 24px;
+	font-weight: 600;
+}
+
+.home-text h3 {
+	font-size: 24px;
+	font-weight: 600;
+	margin-bottom: 3rem;
+}
+
+.btn {
+	display: inline-block;
+	padding: 14px 40px;
+	border-radius: 0.5rem;
+	font-size: 17px;
+	font-weight: 500;
+	background: var(--main-color);
+	color: var(--text-color);
+	border: 1px solid var(--main-color);
+	transition: all .40s ease;
+}
+
+.btn:hover {
+	transform: scale(1.01) translateY(-5px);
+	background: transparent;
+	border: 1px solid var(--main-color);
 }
