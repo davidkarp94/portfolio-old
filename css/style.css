@@ -226,7 +226,6 @@ span {
 .main-text h1 {
 	font-size: var(--h2-font);
 	text-align: center;
-	margin-bottom: 2rem;
 }
 
 .container {
@@ -344,26 +343,37 @@ span {
 
 .projects-content {
 	display: grid;
-	grid-template-columns: repeat(3, 1fr);
+	grid-template-columns: 1fr;
 	align-items: center;
 	gap: 2rem;
 	margin-top: 5rem;
 }
 
-.project-img{
-	background-image: url(../img/portfolio1.jpg);
+@media (min-width: 768px) {
+	.projects-content {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+.project-img {
 	height: 350px;
-	width: auto;
+	width: 100%;
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
 	border-radius: .5rem;
 	margin-bottom: 1.5rem;
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	padding: 1rem;
+	gap: 3rem;
+	padding: 2rem;
 	transition: .5s;
+}
+
+.img1 {
+	background-image: url(../img/portfolio1.jpg);
 }
 
 .row {
@@ -385,10 +395,28 @@ span {
 	color: transparent;
 }
 
-.project-img:hover {
-	filter: grayscale();
+.project-btn {
+	background: transparent;
+	color: transparent;
+	border: none;
 }
 
 .project-img:hover > .project-img-text {
 	color: #fff;
+}
+
+.project-img:hover > .project-btn {
+	background: var(--main-color);
+	color: var(--text-color);
+	border: 1px solid var(--main-color);
+}
+
+.project-img:hover > .project-btn:hover {
+	background: transparent;
+	color: var(--text-color);
+	border: 1px solid var(--main-color);
+}
+
+.project-img:hover {
+	transform: scale(1.02);
 }
