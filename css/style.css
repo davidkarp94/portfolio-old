@@ -36,7 +36,7 @@ header {
 	align-items: center;
 	justify-content: space-between;
 	background: transparent;
-  	backdrop-filter: blur(2px);
+  	backdrop-filter: blur(6px);
 	padding: 32px 16%;
 	border-bottom: 1px solid transparent;
 	transition: all .40s ease;
@@ -46,7 +46,7 @@ header.sticky {
 	padding: 10px 16%;
 	border-bottom: 1px solid #0e1630;
 	transition: .3s;
-	background: rgba(235,74,74,.03);
+	background: rgba(0,0,0,.6);
 }
 
 .logo img {
@@ -340,4 +340,55 @@ span {
 	color: var(--main-color);
 	font-size: 24px;
 	font-weight: 600;
+}
+
+.projects-content {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	align-items: center;
+	gap: 2rem;
+	margin-top: 5rem;
+}
+
+.project-img{
+	background-image: url(../img/portfolio1.jpg);
+	height: 350px;
+	width: auto;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	border-radius: .5rem;
+	margin-bottom: 1.5rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 1rem;
+	transition: .5s;
+}
+
+.row {
+	padding: 25px;
+	background: #12141c;
+	border-radius: .5rem;
+	transition: all .40s ease;
+}
+
+.row h3 {
+	text-align: center;
+}
+
+.project-img-text {
+	text-align: center;
+	font-size: var(--p-font);
+	font-weight: 700;
+	transition: .5s;
+	color: transparent;
+}
+
+.project-img:hover {
+	filter: grayscale();
+}
+
+.project-img:hover > .project-img-text {
+	color: #fff;
 }
