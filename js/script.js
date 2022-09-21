@@ -44,3 +44,38 @@ typewriter
     .typeString('Buenos Aires, Argentina.')
     .pauseFor(2000)
     .start();
+
+// Colores
+
+const colors = document.getElementsByClassName('colors');
+
+let i;
+
+for (i=0; i<colors.length; i++) {
+    colors[i].addEventListener('click', changeColor);
+    colors[i].addEventListener('click', changeBg)
+}
+
+function changeColor () {
+    let color = this.getAttribute('data-color');
+    document.documentElement.style.setProperty('--main-color', color);
+}
+
+function changeBg () {
+    let color = this.getAttribute('data-color');
+    if (color == '#eb4a4a') {
+        document.documentElement.style.setProperty('--bg-img1', 'url(../img/backgrounds/bg1-red.svg)');
+        document.documentElement.style.setProperty('--bg-img2', 'url(../img/backgrounds/bg2-red.svg)');
+        document.documentElement.style.setProperty('--bg-img3', 'url(../img/backgrounds/bg3-red.svg)');
+    }
+    else if (color == '#E573D2') {
+        document.documentElement.style.setProperty('--bg-img1', 'url(../img/backgrounds/bg1-pink.svg)');
+        document.documentElement.style.setProperty('--bg-img2', 'url(../img/backgrounds/bg2-pink.svg)');
+        document.documentElement.style.setProperty('--bg-img3', 'url(../img/backgrounds/bg3-pink.svg)');
+    }
+    else {
+        document.documentElement.style.setProperty('--bg-img1', 'url(../img/backgrounds/bg1-blue.svg)');
+        document.documentElement.style.setProperty('--bg-img2', 'url(../img/backgrounds/bg2-blue.svg)');
+        document.documentElement.style.setProperty('--bg-img3', 'url(../img/backgrounds/bg3-blue.svg)');
+    }
+}

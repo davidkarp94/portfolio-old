@@ -7,6 +7,11 @@
 	--h1-font: 5.2rem;
 	--h2-font: 3.5rem;
 	--p-font: 1.1rem;
+
+	/* Background Images */
+	--bg-img1: url(../img/backgrounds/bg1-red.svg);
+	--bg-img2: url(../img/backgrounds/bg2-red.svg);
+	--bg-img3: url(../img/backgrounds/bg3-red.svg);
 }
 
 * {
@@ -92,7 +97,6 @@ section {
 	height: 100vh;
 	width: 100%;
 	position: relative;
-	background: url(../img/bg1.svg);
 	background-size: cover;
 	background-position: center;
 	display: flex;
@@ -102,7 +106,7 @@ section {
 
 	animation-name: animate;
 	animation-direction: alternate-reverse;
-	animation-duration: 60s;
+	animation-duration: 15s;
 	animation-fill-mode: forwards;
 	animation-iteration-count: infinite;
 	animation-play-state: running;
@@ -111,27 +115,15 @@ section {
 
 @keyframes animate {
 	0% {
-		background-image: url(../img/bg2.svg);
+		background-image: var(--bg-img1);
 	}
 
-	20% {
-		background-image: url(../img/bg3.svg);
-	}
-
-	40% {
-		background-image: url(../img/bg4.svg);
-	}
-
-	60% {
-		background-image: url(../img/bg5.svg);
-	}
-
-	80% {
-		background-image: url(../img/bg6.svg);
+	50% {
+		background-image: var(--bg-img2);
 	}
 
 	100% {
-		background-image: url(../img/bg7.svg);
+		background-image: var(--bg-img3);
 	}
 }
 
@@ -560,7 +552,57 @@ form textarea {
 	font-size: 20px;
 	padding: 10px;
 	border-radius: .5rem;
-	
+}
+
+/* Palette */
+
+.palette {
+	position: fixed;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 1.5rem;
+	left: 2.1rem;
+	bottom: 2.1rem;
+	line-height: 60px;
+	font-size: 30px;
+	cursor: pointer;
+	color: var(--main-color);
+	transition: ease-in-out 300ms;
+}
+
+.palette:hover ul {
+	display: flex;
+}
+
+.fa-palette:hover {
+	filter: brightness(200%);
+	transition: .5s;
+}
+
+.palette ul {
+	display: none;
+	gap: 1.5rem;
+}
+
+.colors {
+	list-style: none;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+#red {
+	background-color: #eb4a4a;
+}
+
+#blue {
+	background-color: #6C79F1;
+}
+
+#pink {
+	background-color: #E573D2;
 }
 
 /* Media Querys Generales */
