@@ -248,11 +248,15 @@ span {
 
 .skill-box:hover > .skill-title:after,
 .skill-box:hover > .skill-title:before{
-	width: 35px;
+	width: 45px;
 }
 
 .skill-box:hover .skill-img {
-	transform: translateY(-10px);
+	transform: translateY(-5px);
+}
+
+.skill-box:hover .skill-title h2 {
+	color: var(--main-color);
 }
 
 .skill-title {
@@ -286,6 +290,11 @@ span {
 	border-radius: 0 2px 2px 0;
 	background-color: var(--main-color);
 	transition: .5s;
+}
+
+.skill-title h2 {
+	font-size: 2.4rem;
+	transition: .7s;
 }
 
 .skill-title h3 {

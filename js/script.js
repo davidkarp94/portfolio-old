@@ -32,3 +32,15 @@ sr.reveal('.about,.skills,.projects,.contact', {
     delay: 200,
     origin: 'bottom'
 })
+
+const app = document.getElementById('typewriter');
+
+const typewriter = new Typewriter(app, {
+    loop: true,
+    delay: 150
+})
+
+typewriter
+    .typeString('Buenos Aires, Argentina.')
+    .pauseFor(2000)
+    .start();
