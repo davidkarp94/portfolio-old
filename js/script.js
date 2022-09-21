@@ -24,12 +24,12 @@ const sr = ScrollReveal ({
 })
 
 sr.reveal('.home-text', {
-    delay: 190,
+    delay: 50,
     origin: 'bottom'
 })
 
 sr.reveal('.about,.skills,.projects,.contact', {
-    delay: 200,
+    delay: 60,
     origin: 'bottom'
 })
 
@@ -79,3 +79,15 @@ function changeBg () {
         document.documentElement.style.setProperty('--bg-img3', 'url(../img/backgrounds/bg3-blue.svg)');
     }
 }
+
+// Skill Images
+
+const cards = document.getElementsByClassName('project-img');
+
+function asignImage(cards) {
+    for (let i = 0; i < cards.length; i++) {
+        cards[i].style.setProperty('background-image', `url(../img/proyectos/${i+1}.jpg)`);
+    }
+}
+
+asignImage(cards);
