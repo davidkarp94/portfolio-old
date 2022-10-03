@@ -91,3 +91,38 @@ function asignImage(cards) {
 }
 
 asignImage(cards);
+
+const email = document.getElementById('email');
+const phone = document.getElementById('phone');
+const copiedEmail = document.getElementById('copied-email');
+const copiedPhone = document.getElementById('copied-phone');
+
+email.addEventListener('click', () => {
+    let texto = 'davidkarp94@gmail.com';
+    navigator.clipboard.writeText(texto)
+        .then(() => {
+        mostrarCopiado(copiedEmail)
+    },)
+        .catch(err => {
+        console.log('Something went wrong', err);
+    })
+});
+
+phone.addEventListener('click', () => {
+    let texto = '+54 9 11 50943302';
+    navigator.clipboard.writeText(texto)
+        .then(() => {
+        mostrarCopiado(copiedPhone)
+    })
+        .catch(err => {
+        console.log('Something went wrong', err);
+    })
+});
+
+function mostrarCopiado(obj) {
+        obj.style.setProperty('display', 'block')
+
+        setTimeout(() => {
+            obj.style.setProperty('display', 'none')
+        }, 2000)
+}

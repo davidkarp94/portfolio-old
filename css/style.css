@@ -24,6 +24,28 @@
 	scroll-behavior: smooth;
 }
 
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: var(--main-color);
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: var(--main-color);
+    border-radius: 10px;
+    border: 1px solid #000;
+  }
+
 body {
 	background: var(--bg-color);
 	color: var(--text-color);
@@ -235,7 +257,7 @@ span {
 
 .container {
 	display: grid;
-	grid-template-columns: repeat(3, 1fr);
+	grid-template-columns: repeat(4, 1fr);
 	justify-content: center;
 	align-items: center;
 	text-align: center;
@@ -300,6 +322,7 @@ span {
 .skill-title h2 {
 	font-size: 2rem;
 	transition: .7s;
+	margin-bottom: .7rem;
 }
 
 .skill-title h3 {
@@ -332,6 +355,13 @@ span {
 .skill-icon {
 	width: 100px;
 	z-index: 2;
+}
+
+@media (max-width: 992px) {
+	.container {
+		grid-template-columns: repeat(3, 1fr);
+		padding: 2rem 50px;
+	}
 }
 
 @media (max-width: 768px) {
@@ -483,16 +513,24 @@ span {
 	margin-bottom: 2rem;
 }
 
+#copied-email,
+#copied-phone {
+	color: var(--main-color) !important;
+	font-style: italic;
+	display: none;
+}
+
 .contact-list {
 	margin-bottom: 1rem;
 }
 
 .contact-list li {
 	margin-bottom: 10px;
-	display: block;
+	display: flex;
+	gap: 1rem;
 }
 
-.contact-list li a {
+.copy {
 	display: block;
 	color: gray;
 	font-size: var(--p-font);
@@ -500,9 +538,10 @@ span {
 	transition: all .40s ease;
 }
 
-.contact-list li a:hover {
+.copy:hover {
 	transform: scale(1.01) translateY(-5px);
 	color: var(--main-color);
+	cursor: pointer;
 }
 
 .contact-icons i {
@@ -657,6 +696,16 @@ form textarea {
 
 #pink {
 	background-color: #E573D2;
+}
+
+@media(max-width: 992px) {
+	.palette {
+		bottom: 4rem;
+	}
+
+	.top {
+		bottom: 4rem;
+	}
 }
 
 /* Media Querys Generales */
