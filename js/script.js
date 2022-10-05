@@ -86,7 +86,7 @@ const cards = document.getElementsByClassName('project-img');
 
 function asignImage(cards) {
     for (let i = 0; i < cards.length; i++) {
-        cards[i].style.setProperty('background-image', `url(../img/proyectos/${i+1}.jpg)`);
+        cards[i].style.setProperty('background-image', `url(./img/proyectos/${i+1}.JPG)`);
     }
 }
 
