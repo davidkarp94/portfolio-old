@@ -227,6 +227,8 @@ span {
 	height: auto;
 	width: 100%;
 	max-width: 460px;
+	border-radius: 50%;
+	filter: brightness(110%);
 }
 
 .about-text h4 {
@@ -525,7 +527,6 @@ span {
 }
 
 .contact-list li {
-	margin-bottom: 10px;
 	display: flex;
 	gap: 1rem;
 }
@@ -596,6 +597,7 @@ form textarea {
 	width: 190px;
 	transition: all .40s ease;
 	cursor: pointer;
+	margin-bottom: 0;
 }
 
 /* Footer */
