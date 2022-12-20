@@ -386,6 +386,7 @@ span {
 	color: var(--main-color);
 	font-size: 24px;
 	font-weight: 600;
+	margin: 2rem 0;
 }
 
 .projects-content {
@@ -427,6 +428,26 @@ span {
 	z-index: 0;
 }
 
+.project-img-principal {
+	height: 850px;
+	width: auto;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	border-radius: .5rem;
+	margin-bottom: 1.5rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 3rem;
+	padding: 2rem;
+	transition: .5s;
+	position: relative;
+	z-index: 0;
+	background-image: url(../img/bintt.jpg);
+}
+
 .overlay {
 	position: absolute;
 	width: 100%;
@@ -436,7 +457,8 @@ span {
 	z-index: 1;
 }
 
-.project-img:hover .overlay {
+.project-img:hover .overlay,
+.project-img-principal:hover .overlay {
 	background: rgba(0,0,0,.7);
 }
 
@@ -445,6 +467,10 @@ span {
 	background: #12141c;
 	border-radius: .5rem;
 	transition: all .40s ease;
+}
+
+.row-principal {
+	margin-bottom: 6rem;
 }
 
 .row h3 {
@@ -467,23 +493,27 @@ span {
 	z-index: 2;
 }
 
-.project-img:hover > .project-img-text {
+.project-img:hover > .project-img-text,
+.project-img-principal:hover > .project-img-text {
 	color: #fff;
 }
 
-.project-img:hover > .project-btn {
+.project-img:hover > .project-btn,
+.project-img-principal:hover > .project-btn {
 	background: var(--main-color);
 	color: var(--text-color);
 	border: 1px solid var(--main-color);
 }
 
-.project-img:hover > .project-btn:hover {
+.project-img:hover > .project-btn:hover,
+.project-img-principal:hover > .project-btn:hover {
 	background: transparent;
 	color: var(--text-color);
 	border: 1px solid var(--main-color);
 }
 
-.project-img:hover {
+.project-img:hover,
+.project-img-principal:hover {
 	transform: scale(1.02);
 }
 
@@ -781,5 +811,9 @@ form textarea {
 
 	.navbar.active {
 		top: 100%;
+	}
+
+	.project-img-principal {
+		height: 600px;
 	}
 }
