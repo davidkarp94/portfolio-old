@@ -433,7 +433,6 @@ span {
 	width: auto;
 	background-repeat: no-repeat;
 	background-size: cover;
-	background-position: center;
 	border-radius: .5rem;
 	margin-bottom: 1.5rem;
 	display: flex;
@@ -445,7 +444,7 @@ span {
 	transition: .5s;
 	position: relative;
 	z-index: 0;
-	background-image: url(../img/bintt.jpg);
+	background-image: url(../img/redsocial.jpg);
 }
 
 .overlay {
