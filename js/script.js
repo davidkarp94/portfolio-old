@@ -87,7 +87,6 @@ const cards = document.getElementsByClassName('project-img');
 function asignImage(cards) {
     for (let i = 0; i < cards.length; i++) {
         cards[i].style.setProperty('background-image', `url(https://davidkarp94.github.io/portfolio/img/proyectos/${i}.jpg)`);
-        console.log(i)
     }
 }
 
